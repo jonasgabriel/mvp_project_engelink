@@ -1,3 +1,22 @@
 from django.contrib import admin
+from .models import demands
 
-# Register your models here.
+
+@admin.register(demands.Demand)
+class DemandAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(demands.ContactInformation)
+class ContactInformationAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(demands.PartsDescription)
+class PartsDescriptionAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(demands.DestinationAddress)
+class DestinationAddressAdmin(admin.ModelAdmin):
+    pass
