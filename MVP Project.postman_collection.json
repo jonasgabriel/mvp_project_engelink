@@ -1,0 +1,248 @@
+{
+	"info": {
+		"_postman_id": "3de8c6e4-c9e8-441a-9f72-0c1996d13e28",
+		"name": "MVP Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "jonas",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "jonas10",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/login/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"login",
+								""
+							]
+						},
+						"description": "User login"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Demands",
+			"item": [
+				{
+					"name": "List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/demands/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"demands",
+								""
+							]
+						},
+						"description": "List all demands"
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-CSRFToken",
+								"value": "85BtmYUcxIRQlQpVWZOFLBwJ52aH6fSkcC01TiDVEMZZs6KzLbnUAMmpHnqilaUW",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"part_description\": {\n                \"name\": \"Braco robotico\",\n                \"price\": \"700000.00\"\n            },\n            \"destination_address\": {\n                \"street_name\": \"Rua Hasta la vista baby\",\n                \"street_number\": 90,\n                \"postcode_number\": \"707070-700\",\n                \"city\": \"Niterói\",\n                \"state_name\": \"Rio de Janeiro\"\n            },\n            \"contact_information\": {\n                \"phone_1\": \"1998394903\",\n                \"phone_2\": \"1998340055\",\n                \"email\": \"jazz@gmail.com\"\n            },\n            \"is_completed\": false,\n            \"image_status\": \"/media/demands/completion/baseline-check_circle_outline.svg\"\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/demands/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"demands",
+								""
+							]
+						},
+						"description": "Create demands"
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/demands/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"demands",
+								"1"
+							]
+						},
+						"description": "Get a specific demand"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "X-CSRFToken",
+								"value": "85BtmYUcxIRQlQpVWZOFLBwJ52aH6fSkcC01TiDVEMZZs6KzLbnUAMmpHnqilaUW",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/demands/9/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"demands",
+								"9",
+								""
+							]
+						},
+						"description": "Delete a specific demand"
+					},
+					"response": []
+				},
+				{
+					"name": "Patch",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "X-CSRFToken",
+								"type": "text",
+								"value": "85BtmYUcxIRQlQpVWZOFLBwJ52aH6fSkcC01TiDVEMZZs6KzLbnUAMmpHnqilaUW"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"is_completed\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/demands/1/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"demands",
+								"1",
+								""
+							]
+						},
+						"description": "Finalize demand"
+					},
+					"response": []
+				},
+				{
+					"name": "Put",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "X-CSRFToken",
+								"value": "85BtmYUcxIRQlQpVWZOFLBwJ52aH6fSkcC01TiDVEMZZs6KzLbnUAMmpHnqilaUW",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"part_description\": {\n        \"id\": 1,\n        \"name\": \"YESS\",\n        \"price\": 1822.0\n    },\n    \"destination_address\": {\n        \"id\": 1,\n        \"street_name\": \"Rua Josefina Cabana Del ben 335\",\n        \"street_number\": 1221,\n        \"postcode_number\": \"13468841\",\n        \"city\": \"Americana\",\n        \"state_name\": \"SP\"\n    },\n    \"contact_information\": {\n        \"id\": 1,\n        \"phone_1\": \"1231\",\n        \"phone_2\": \"1212\",\n        \"email\": \"jonasgabrielpt@gmail.com\"\n    },\n    \"is_completed\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/demands/1/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"demands",
+								"1",
+								""
+							]
+						},
+						"description": "Altera os valores da demanda"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
