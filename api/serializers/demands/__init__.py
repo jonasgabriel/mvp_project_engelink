@@ -1,0 +1,4 @@
+from .destination_address import DestinationAddressSerializer
+from .demand import DemandSerializer
+from .contact_information import ContactInformationSerializer
+from .parts_description import PartsDescriptionSerializer
