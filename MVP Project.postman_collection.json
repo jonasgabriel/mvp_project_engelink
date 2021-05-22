@@ -12,7 +12,13 @@
 					"name": "Login",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "X-CSRFToken",
+								"value": "A0ESS6dMF7cfoon0KM4HF4AbBL7Tz8LKZATp1UTIx3uFhwMozUXKgy11fbpEQc2N",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "formdata",
 							"formdata": [
@@ -85,13 +91,13 @@
 						"header": [
 							{
 								"key": "X-CSRFToken",
-								"value": "85BtmYUcxIRQlQpVWZOFLBwJ52aH6fSkcC01TiDVEMZZs6KzLbnUAMmpHnqilaUW",
+								"value": "A0ESS6dMF7cfoon0KM4HF4AbBL7Tz8LKZATp1UTIx3uFhwMozUXKgy11fbpEQc2N",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n            \"part_description\": {\n                \"name\": \"Braco robotico\",\n                \"price\": \"700000.00\"\n            },\n            \"destination_address\": {\n                \"street_name\": \"Rua Hasta la vista baby\",\n                \"street_number\": 90,\n                \"postcode_number\": \"707070-700\",\n                \"city\": \"Niterói\",\n                \"state_name\": \"Rio de Janeiro\"\n            },\n            \"contact_information\": {\n                \"phone_1\": \"1998394903\",\n                \"phone_2\": \"1998340055\",\n                \"email\": \"jazz@gmail.com\"\n            },\n            \"is_completed\": false,\n            \"image_status\": \"/media/demands/completion/baseline-check_circle_outline.svg\"\n        }",
+							"raw": "{\n    \"part_description\": {\n        \"name\": \"Braco robotico\",\n        \"price\": \"700000.00\"\n    },\n    \"destination_address\": {\n        \"street_name\": \"Rua Hasta la vista baby\",\n        \"street_number\": 90,\n        \"postcode_number\": \"707070-700\",\n        \"city\": \"Niterói\",\n        \"state_name\": \"Rio de Janeiro\"\n    },\n    \"contact_information\": {\n        \"phone_1\": \"1998394903\",\n        \"phone_2\": \"1998340055\",\n        \"email\": \"jazz@gmail.com\"\n    },\n    \"is_completed\": false\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -144,12 +150,12 @@
 						"header": [
 							{
 								"key": "X-CSRFToken",
-								"value": "85BtmYUcxIRQlQpVWZOFLBwJ52aH6fSkcC01TiDVEMZZs6KzLbnUAMmpHnqilaUW",
+								"value": "A0ESS6dMF7cfoon0KM4HF4AbBL7Tz8LKZATp1UTIx3uFhwMozUXKgy11fbpEQc2N",
 								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8000/api/demands/9/",
+							"raw": "http://localhost:8000/api/demands/2/",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -158,7 +164,7 @@
 							"path": [
 								"api",
 								"demands",
-								"9",
+								"2",
 								""
 							]
 						},
@@ -211,13 +217,13 @@
 						"header": [
 							{
 								"key": "X-CSRFToken",
-								"value": "85BtmYUcxIRQlQpVWZOFLBwJ52aH6fSkcC01TiDVEMZZs6KzLbnUAMmpHnqilaUW",
+								"value": "A0ESS6dMF7cfoon0KM4HF4AbBL7Tz8LKZATp1UTIx3uFhwMozUXKgy11fbpEQc2N",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 1,\n    \"part_description\": {\n        \"id\": 1,\n        \"name\": \"YESS\",\n        \"price\": 1822.0\n    },\n    \"destination_address\": {\n        \"id\": 1,\n        \"street_name\": \"Rua Josefina Cabana Del ben 335\",\n        \"street_number\": 1221,\n        \"postcode_number\": \"13468841\",\n        \"city\": \"Americana\",\n        \"state_name\": \"SP\"\n    },\n    \"contact_information\": {\n        \"id\": 1,\n        \"phone_1\": \"1231\",\n        \"phone_2\": \"1212\",\n        \"email\": \"jonasgabrielpt@gmail.com\"\n    },\n    \"is_completed\": false\n}",
+							"raw": "{\n    \"part_description\": {\n        \"name\": \"YESS\",\n        \"price\": 1822.0\n    },\n    \"destination_address\": {\n        \"street_name\": \"Rua aJosefina Cabana Del ben 335\",\n        \"street_number\": 1221,\n        \"postcode_number\": \"13468841\",\n        \"city\": \"Americana\",\n        \"state_name\": \"SP\"\n    },\n    \"contact_information\": {\n        \"phone_1\": \"1231\",\n        \"phone_2\": \"1212\",\n        \"email\": \"jonasgabrielpt@gmail.com\"\n    },\n    \"is_completed\": true\n}",
 							"options": {
 								"raw": {
 									"language": "json"
