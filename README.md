@@ -9,14 +9,14 @@
     docker ps
 
 ### Rodar as migrações
-    docker exec -it CONTAINER ID python manage.py makemigrations
-    docker exec -it CONTAINER ID python manage.py migrate
+    docker exec -it CONTAINER_ID python manage.py makemigrations
+    docker exec -it CONTAINER_ID python manage.py migrate
 
 ### Rodar os testes
-    docker exec -it CONTAINER ID python manage.py test
+    docker exec -it CONTAINER_ID python manage.py test
 
 ### Criar um SuperUser
-    `docker exec -it CONTAINER ID python manage.py createsuperuser
+    `docker exec -it CONTAINER_ID python manage.py createsuperuser
 #
 # Postman
 ### As postman collections estão no diretório base
