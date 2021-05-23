@@ -5,4 +5,4 @@ from api.models import demands
 class DestinationAddressSerializer(serializers.ModelSerializer):
     class Meta:
         model = demands.DestinationAddress
-        fields = '__all__'
+        fields = "__all__"

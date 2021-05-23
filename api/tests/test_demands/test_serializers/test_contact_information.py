@@ -6,11 +6,11 @@ from api.models.demands import ContactInformation
 class ContactInformationSerializerTestCase(TestCase):
     def setUp(self) -> None:
         self.data = {
-                    "id": 1,
-                    "phone_1": '1998394903',
-                    "phone_2": '1998340055',
-                    "email": "jazz@gmail.com",
-                }
+            "id": 1,
+            "phone_1": "1998394903",
+            "phone_2": "1998340055",
+            "email": "jazz@gmail.com",
+        }
         self.instance = ContactInformation.objects.create(**self.data)
 
     def test_serializer_contact_information(self) -> None:
@@ -19,10 +19,10 @@ class ContactInformationSerializerTestCase(TestCase):
 
     def test_deserializer_contact_information(self) -> None:
         data = {
-                    "phone_1": '1998394102',
-                    "phone_2": '1998340103',
-                    "email": "best@gmail.com",
-                }
+            "phone_1": "1998394102",
+            "phone_2": "1998340103",
+            "email": "best@gmail.com",
+        }
 
         serializer = ContactInformationSerializer(data=data)
         is_valid = serializer.is_valid()

@@ -4,7 +4,7 @@ from .models import demands
 
 @admin.register(demands.Demand)
 class DemandAdmin(admin.ModelAdmin):
-    exclude = ('image_status',)
+    exclude = ("image_status",)
 
 
 @admin.register(demands.ContactInformation)

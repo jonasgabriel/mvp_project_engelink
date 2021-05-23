@@ -9,7 +9,7 @@ class Demand(models.Model):
         (
             True,
             "demands/completion/baseline-check_circle_outline.svg",
-        )
+        ),
     )
 
     part_description = models.OneToOneField(

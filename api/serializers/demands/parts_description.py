@@ -5,4 +5,4 @@ from api.models import demands
 class PartsDescriptionSerializer(serializers.ModelSerializer):
     class Meta:
         model = demands.PartsDescription
-        fields = '__all__'
+        fields = "__all__"

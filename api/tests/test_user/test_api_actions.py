@@ -1,6 +1,4 @@
 from test_plus import APITestCase
-from api.models.demands import *
-from django.contrib.auth.models import User
 
 
 class IntegrationsTestCase(APITestCase):
